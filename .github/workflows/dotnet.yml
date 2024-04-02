@@ -38,3 +38,8 @@ jobs:
     - name: Publish Artifact
       run: ./build.ps1
       shell: pwsh
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: LockWorkstation
+        path: .\bin\Release\net8.0\win-x64\native\LockWorkstation.exe
